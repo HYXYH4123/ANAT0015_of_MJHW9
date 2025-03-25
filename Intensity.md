@@ -1,3 +1,6 @@
+LineIntensity.xlsx
+
+## Column Names
 - 'Date' - The date when the cell image was captured.
 - 'Microscopy' - The name of the microscope used for imaging. Zeiss Elyra 7 is a widefield microscope, while Nikon SoRa is a confocal microscope.
 - 'CellLine' - The cell line used for transfection to express GFPs; either KnockOut (KO) or WildType (WT).

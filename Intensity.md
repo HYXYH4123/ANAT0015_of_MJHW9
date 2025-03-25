@@ -1,4 +1,7 @@
-LineIntensity.xlsx
+# LineIntensity.xlsx
+This file contains raw fluorescence intensity measurements acquired along a line-shaped region of interest (ROI) across individual cells expressing EGFP-WAVE2, StayGold-E138D-WAVE2, or mStayGold2-WAVE2. 
+
+Line intensity was measured along a straight line manually drawn from the cell periphery toward the nucleus, with larger distance values indicating closer proximity to the nucleus. For each cell, three such lines were drawn to account for variability and improve measurement reliability. The average intensity across the three lines was calculated as LT123Ave. In cells with time-lapse recordings, line intensity measurements were also performed after five minutes of continuous laser exposure to assess photobleaching. Similarly, three lines were drawn at this later time point, and the average intensity was recorded as LT456Ave.
 
 ## Column Names
 - 'Date' - The date when the cell image was captured.

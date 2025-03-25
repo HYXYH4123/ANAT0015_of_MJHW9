@@ -1,4 +1,4 @@
-# Supplemental Information for MJHW9's ANAT0015 project.
+# Data Analysis for MJHW9's ANAT0015 project.
 
 This Github includes the raw fluorescence intensity data and the analytical Python script for the project. 
 

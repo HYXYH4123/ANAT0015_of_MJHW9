@@ -2,7 +2,7 @@
 
 This Github includes the raw fluorescence intensity data and the analytical Python script for the project. 
 
-## File names
+## Files
 - LineIntensity.xlsx – This file contains raw fluorescence intensity measurements acquired along a line-shaped region of interest (ROI) across individual cells expressing EGFP-WAVE2, StayGold-E138D-WAVE2, or mStayGold2-WAVE2. Details please refer to Intensity.md.
 - AreaIntensity.xlsx – This file contains raw fluorescence intensity measurements acquired from rectangular regions of interest (ROIs) within cells expressing EGFP-WAVE2, StayGold-E138D-WAVE2, or mStayGold2-WAVE2. Details please refer to Intensity.md.
 - Intensity.md - This file contains detailed description on the two Microsoft Excels files.

@@ -1,69 +1,79 @@
-# 📊 Data Analysis for MJHW9's ANAT0015 Project
+# 🧪 MJHW9's ANAT0015 Project – StayGold Fluorescent Proteins Enable Superior Visualisation of Scar/WAVE Complex Dynamics in Melanoma Cells
 
-This repository contains raw fluorescence intensity data and Python-based analytical pipelines for the **MJHW9 ANAT0015** project. The study focuses on comparing the **photostability** and **signal distribution** of various GFP variants in migrating **B16F1 melanoma cells**, using both **line-based** and **area-based** intensity acquisition strategies.
+This repository contains structured datasets and Python-based image analysis pipelines for the **ANAT0015 project** of MJHW9. The aim is to quantitatively evaluate the **photostability** and **spatial intensity distribution** of various GFP variants in **B16F1 melanoma cells**, using both **line-based** and **area-based** fluorescence intensity measurements.
 
----
-
-## 📁 Files Overview
-
-### 1. `LineIntensity`
-- **Description**: Contains raw fluorescence intensity values acquired along line-shaped regions of interest (ROIs) in B16F1 cells expressing:
-  - `EGFP-WAVE2`
-  - `StayGold-E138D-WAVE2`
-  - `mStayGold2-WAVE2`
-- **Contents**: Includes processed `.xlsx` data, and a full Python script for:
-  - Signal filtering & normalization
-  - SNR (signal-to-noise ratio) calculation
-  - Bootstrapped SNR barplot with statistical significance annotations
-  - Distance-based intensity profile plots
-
-### 2. `AreaIntensity`
-- **Description**: Contains whole-cell intensity time series data collected from rectangular ROIs, comparing photobleaching behavior across:
-  - `EGFP`
-  - `EGFP-WAVE2`
-  - `StayGold-E138D-WAVE2`
-  - `mStayGold2-WAVE2`
-- **Contents**:
-  - Raw `.xlsx` data (AT1–AT31, over 5 minutes)
-  - Python script for:
-    - Per-cell normalization
-    - Representative photobleaching curve plotting for four selected cells
-
-### 3. `LineIntensity_Empty_EGFP`
-- **Description**: Contains intensity values from cells expressing **EGFP only** (no fusion tag), serving as a **control** for background distribution analysis.
-- **Contents**:
-  - `.xlsx` raw data
-  - Python script for:
-    - Cell-wise normalization
-    - Global population average plot across 0–6 μm from the membrane
+This research was conducted under the supervision of Professor Robert Insall and Dr. Lucija Mijanovic.
 
 ---
 
-## 🧪 Analysis Methods
+## 📊 Dataset Overview
 
-Key processing steps used across analyses include:
+This study involves fluorescence imaging of migrating B16F1 cells expressing different GFP-tagged constructs:
 
-1. **Filtering**: Only data within 6 μm of the cell membrane was retained.
-2. **Averaging**: For line data, LT1–3 and LT4–6 were averaged to represent early (t = 0 s) and late (t = 300 s) signals.
-3. **Normalization**: Intensity values were normalized within each cell; some datasets were globally scaled for comparison.
-4. **SNR Calculation**: SNR = max(signal) / mean(background); noise defined as average intensity from 2.5–6 μm.
-5. **Bootstrapping**: Simulated per-cell SNR distributions used for plotting SEM and significance.
-6. **Plotting**: All plots were saved as high-resolution `.svg` images for publication-ready quality.
+- **EGFP**  
+- **EGFP-WAVE2**  
+- **StayGold-E138D-WAVE2**  
+- **mStayGold2-WAVE2**
+
+Two acquisition strategies were used:
+
+1. **Line-based analysis**: Fluorescence intensities were sampled along lines extending from the cell edge.
+2. **Area-based analysis**: Whole-cell intensities were recorded over time for photobleaching assessment.
+
+---
+
+## 🗂️ File Structure
+
+### 🔹 `LineIntensity`
+- Raw and processed intensity data from **line ROI** imaging.
+- Includes:
+  - Per-cell fluorescence normalization
+  - SNR (Signal-to-Noise Ratio) calculation
+  - SNR ± SEM barplots and front–back intensity profiles
+  - Bootstrapped per-cell simulation (for significance testing)
+
+### 🔹 `AreaIntensity`
+- Time-lapse whole-cell intensity data (AT1–AT31, 0–300s).
+- Compares bleaching profiles of four GFP constructs.
+- Visualizes normalized intensity decay curves.
+
+**💡 ImageJ Macro Used:**  
+An [ImageJ macro script](AreaIntensity.ijm) was used to extract the full-cell ROI intensity over time from time-series `.nd2` or `.tif` stacks. This macro automates:
+- Opening time-lapse images
+- Selecting rectangular ROIs
+- Measuring mean intensity per frame
+- Exporting results to `.csv`/`.xlsx`
+
+### 🔹 `LineIntensity_Empty_EGFP`
+- Control dataset using **non-tagged EGFP**.
+- Serves as a baseline for front–back intensity gradient validation.
+- Includes normalized average line profile with SEM across 0–6 μm.
+
+---
+
+## ⚙️ Processing Overview
+
+All Python analysis scripts follow these main steps:
+
+1. **Filtering**: Only intensities within 6 μm of the membrane were analyzed.  
+2. **Averaging**: Line segments were averaged as early (LT1–3) and late (LT4–6) signals.  
+3. **Normalization**: Both per-cell and global normalization were applied.  
+4. **SNR Calculation**: Defined as front signal divided by average background (2.5–6 μm).  
+5. **Bootstrapping (Simulated)**: Synthetic per-cell data used to simulate SNR variation and test significance.  
+6. **Plotting**: High-resolution `.svg` plots of:
+   - SNR ± SEM barplots with statistical significance
+   - Front–back intensity decay
+   - Per-cell photobleaching curves
 
 ---
 
 ## 📦 Dependencies
 
-To run the Python scripts, ensure you have the following packages installed:
+To run the included analysis scripts, install the following Python packages:
 
 ```bash
-pandas
-numpy
-seaborn
-matplotlib
-scipy
-statsmodels
-openpyxl
+pip install pandas numpy seaborn matplotlib scipy statsmodels openpyxl
+```
 
 ---
 
@@ -76,6 +86,6 @@ All code was written with full understanding, verified, and finalized by the aut
 
 ## 📬 Contact
 
-For questions, suggestions, or collaboration inquiries, feel free to [open an issue](https://github.com/your-repo/issues) or contact via email:
+For questions, suggestions, or collaboration inquiries, feel free to contact via email:
 
 📧 **zcbtuao@ucl.ac.uk**

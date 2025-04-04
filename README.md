@@ -6,6 +6,14 @@ This repository contains structured datasets and Python-based image analysis pip
 
 ---
 
+## 🙏 Acknowledgements
+
+This project was made possible through the invaluable supervision and support of **Professor Robert Insall** and **Dr. Lucija Mijanovic**. Their guidance, encouragement, and mentorship were instrumental throughout the course of this research.
+
+I am also grateful to all members of the lab for creating such a collaborative and enjoyable environment.
+
+---
+
 ## 📊 Dataset Overview
 
 This study involves fluorescence imaging of migrating B16F1 cells expressing different GFP-tagged constructs:

@@ -40,7 +40,7 @@ Two acquisition strategies were used:
 - Visualizes normalized intensity decay curves.
 
 **💡 ImageJ Macro Used:**  
-An [ImageJ macro script](AreaIntensity.ijm) was used to extract the full-cell ROI intensity over time from time-series `.nd2` or `.tif` stacks. This macro automates:
+An ImageJ macro script was used to extract the full-cell ROI intensity over time from time-series `.nd2` or `.tif` stacks. This macro automates:
 - Opening time-lapse images
 - Selecting rectangular ROIs
 - Measuring mean intensity per frame

@@ -1,16 +1,10 @@
 # 🧪 MJHW9's ANAT0015 Project – StayGold Fluorescent Proteins Enable Superior Visualisation of Scar/WAVE Complex Dynamics in Melanoma Cells
 
-This research was conducted under the supervision of **Professor Robert Insall** and **Dr. Lucija Mijanovic**.
-
-This repository contains structured datasets and Python-based image analysis pipelines for the **ANAT0015 project** of MJHW9. The aim is to quantitatively evaluate the **photostability** and **spatial intensity distribution** of various GFP variants in **B16F1 melanoma cells**, using both **line-based** and **area-based** fluorescence intensity measurements.
-
----
-
-## 🙏 Acknowledgements
-
-This project was made possible through the invaluable supervision and support of **Professor Robert Insall** and **Dr. Lucija Mijanovic**. Their guidance, encouragement, and mentorship were instrumental throughout the course of this research.
+This research was conducted under the supervision of **Professor Robert Insall** and **Dr. Lucija Mijanovic**. Their guidance, encouragement, and mentorship were instrumental throughout the course of this research.
 
 I am also grateful to all members of the lab for creating such a collaborative and enjoyable environment.
+
+This repository contains structured datasets and Python-based image analysis pipelines for the **ANAT0015 project** of MJHW9. The aim is to quantitatively evaluate the **photostability** and **spatial intensity distribution** of various GFP variants in **B16F1 melanoma cells**, using both **line-based** and **area-based** fluorescence intensity measurements.
 
 ---
 

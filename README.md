@@ -51,6 +51,15 @@ An ImageJ macro script was used to extract the full-cell ROI intensity over time
 - Serves as a baseline for front–back intensity gradient validation.
 - Includes normalized average line profile with SEM across 0–6 μm.
 
+### 🔹 `SupplementaryVideo`
+
+- This repository includes four time-lapse videos showcasing the dynamic behavior of B16F1 melanoma cells expressing different GFP-tagged WAVE2 variants:
+  - EGFP: Serves as a negative control, showing diffuse cytoplasmic fluorescence without lamellipodial enrichment.
+  - EGFP-WAVE2: Demonstrates the functional rescue of lamellipodia in WAVE1/2-knockout cells with moderate signal quality.
+  - StayGold-E138D-WAVE2: Exhibits superior photostability and high signal-to-noise ratio (SNR) in lamellipodia, maintaining consistent brightness.
+  - mStayGold2-WAVE2: Shows the highest signal quality and photostability, with sharp lamellipodial localization over time.
+- Each video captures a 5-minute time-lapse (300s), with frame intervals optimized to monitor lamellipodia dynamics at 7 FPS. The videos provide direct visual evidence of the differences in photostability and signal clarity among the GFP variants under live-cell imaging conditions.
+
 ---
 
 ## ⚙️ Processing Overview
